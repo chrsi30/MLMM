@@ -1,0 +1,18 @@
+********** EXPERIMENT NAME
+
+Inhibitor_Concentration_4nM
+
+********** EXPERIMENT NOTES
+
+In-silico experimental settings corresponding to the measurements:
+
+HIV proteinase (assay concentration 4nM) was added to a solution 
+of an irreversible inhibitor and a fluorogenic substrate (25 uM).
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+
+I(0) = 4*1e-3 % (uM) 4nM Inhibitor concentration
+
+********** EXPERIMENT PARAMETER CHANGES
+
+********** EXPERIMENT STATE CHANGES

@@ -1,0 +1,23 @@
+********** EXPERIMENT NAME
+
+Experiment_06
+
+********** EXPERIMENT NOTES
+
+Experiment #6 for the benchmark system proposed in:
+
+Moles C, Mendes P, Banga J: Parameter estimation in biochemical
+pathways: a comparison of global optimization methods.
+Genome Research 2003, 13:2467-2474.
+
+The settings are:
+	S = 0.46416
+	P = 0.13572
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+S = 0.46416 % Substrate S
+P = 0.13572 % Product P
+
+********** EXPERIMENT PARAMETER CHANGES
+
+********** EXPERIMENT STATE CHANGES

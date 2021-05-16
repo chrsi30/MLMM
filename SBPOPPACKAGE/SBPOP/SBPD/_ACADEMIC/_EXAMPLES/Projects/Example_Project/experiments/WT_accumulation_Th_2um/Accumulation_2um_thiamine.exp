@@ -1,0 +1,14 @@
+********** EXPERIMENT NAME
+Accumulation_2um_thiamine
+
+********** EXPERIMENT NOTES
+
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+Thex(0) = 2 % uM
+ThMPex(0) = 0
+ThDPex(0) = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+
+********** EXPERIMENT STATE CHANGES

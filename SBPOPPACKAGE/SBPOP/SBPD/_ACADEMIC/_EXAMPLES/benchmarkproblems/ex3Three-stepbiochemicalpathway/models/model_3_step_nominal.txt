@@ -1,0 +1,118 @@
+********** MODEL NAME
+
+Three_step_biochemical_pathway_nominal_parameters
+
+********** MODEL NOTES
+
+This model represents a biochemical pathway with three enzymatic steps, 
+including the enzymes and mRNAs explicitly. The model was created by 
+Moles and coworkers [1] as a benchmark for parameter estimation.
+
+[1] Moles C, Mendes P, Banga J: Parameter estimation in biochemical
+    pathways: a comparison of global optimization methods.
+    Genome Research 2003, 13:2467-2474.
+    
+This model contains the nominal parameters with which the measurement
+data has been generated.
+
+********** MODEL STATES
+
+% mRNA synthesis and degradation
+d/dt(G1) = vG1syn - vG1deg
+d/dt(G2) = vG2syn - vG2deg
+d/dt(G3) = vG3syn - vG3deg
+
+% Protein synthesis and degradation
+d/dt(E1) = vE1syn - vE1deg
+d/dt(E2) = vE2syn - vE2deg
+d/dt(E3) = vE3syn - vE3deg
+
+% Matabolic reactions
+d/dt(M1) = vSM1 - vM1M2
+d/dt(M2) = vM1M2 - vM2P
+
+% Initial conditions
+G1(0) = 0.6667  
+G2(0) = 0.5725 
+G3(0) = 0.4176 
+E1(0) = 0.4000 
+E2(0) = 0.3641
+E3(0) = 0.2946 
+M1(0) = 1.4190 
+M2(0) = 0.9346
+                       
+********** MODEL PARAMETERS
+
+P = 0.05
+S = 0.1
+
+V1      = 1
+Ki1     = 1
+ni1     = 2
+Ka1     = 1
+na1     = 2
+k1      = 1
+V2      = 1
+Ki2     = 1
+ni2     = 2
+Ka2     = 1
+na2     = 2
+k2      = 1
+V3      = 1
+Ki3     = 1
+ni3     = 2
+Ka3     = 1
+na3     = 2
+k3      = 1
+V4      = 0.1
+K4      = 1
+k4      = 0.1
+V5      = 0.1
+K5      = 1
+k5      = 0.1
+V6      = 0.1
+K6      = 1
+k6      = 0.1
+kcat1   = 1
+Km1     = 1
+Km2     = 1
+kcat2   = 1
+Km3     = 1
+Km4     = 1
+kcat3   = 1
+Km5     = 1
+Km6     = 1
+
+********** MODEL VARIABLES
+
+vG1syn = V1 / (1 + (P/Ki1)^ni1 + (Ka1/S)^na1 )
+vG2syn = V2 / (1 + (P/Ki2)^ni2 + (Ka2/M1)^na2 )
+vG3syn = V3 / (1 + (P/Ki3)^ni3 + (Ka3/M2)^na3 )
+
+vG1deg = k1 * G1
+vG2deg = k2 * G2
+vG3deg = k3 * G3
+
+vE1syn = V4 * G1 / ( K4+G1 )
+vE2syn = V5 * G2 / ( K5+G2 ) 
+vE3syn = V6 * G3 / ( K6+G3 )
+
+vE1deg = k4 * E1
+vE2deg = k5 * E2
+vE3deg = k6 * E3
+
+vSM1   = kcat1*E1*(1/Km1)*(S-M1) / ( 1+S/Km1+M1/Km2 ) 
+vM1M2  = kcat2*E2*(1/Km3)*(M1-M2) / ( 1+M1/Km3+M2/Km4 ) 
+vM2P   = kcat3*E3*(1/Km5)*(M2-P) / ( 1+M2/Km5+P/Km6 )
+
+********** MODEL REACTIONS
+
+
+********** MODEL FUNCTIONS
+
+
+********** MODEL EVENTS
+
+
+********** MODEL MATLAB FUNCTIONS
+

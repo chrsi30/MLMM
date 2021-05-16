@@ -1,0 +1,16 @@
+********** EXPERIMENT NAME
+PHO3D balancing ThDP 10uM
+
+********** EXPERIMENT NOTES
+
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+Thex(0) = 0 % uM
+ThMPex(0) = 0
+ThDPex(0) = 0 % uM
+
+k_PHO3 = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+
+********** EXPERIMENT STATE CHANGES

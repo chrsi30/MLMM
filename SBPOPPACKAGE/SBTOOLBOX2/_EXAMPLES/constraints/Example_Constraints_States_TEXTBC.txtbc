@@ -1,0 +1,64 @@
+********** MODEL NAME
+State_Constraint_Example_TEXTBC
+
+********** MODEL NOTES
+This model exemplifies how to implement upper and lower bounds on state 
+variables in TEXTBC models. The identifier for state constraints is the 
+following: 
+
+    {constraints:["lower bound","upper bound"]}
+    
+This identifier needs to be written as additional information behind the 
+initial condition definitions (see example below).
+
+This information is, of course, optional and can be present at the same 
+time as the SBML related additional information is present (see IC for Y 
+below).
+
+The upper and lower bounds can consist of "+inf","-inf", parameters
+defined in the model and numeric values.
+
+No error checking is done so far that the parameters are really defined, 
+lower is smaller than upper bound, etc.
+
+IMPORTANT: During model import these constraint information are converted 
+to prefactors and piecewiseSB expressions. Thus when exporting the model
+again, the "{constraints:["lower bound","upper bound"]}" information will 
+not be present anymore but replaced by the constraint implementing 
+mathematical constructs.
+
+********** MODEL STATE INFORMATION
+X(0) = 0       {constraints:[-inf,Xmax]}  
+Y(0) = 0.1     {isSpecie:Xmax:concentration}  {constraints:[Ymin,1.5]}  
+
+********** MODEL PARAMETERS
+% Constraints for state-variable X
+Xmax = 1  % Upper bound on X
+
+% Constraints for state-variable Y
+Ymin = -0.1 % Lower bound on Y
+
+********** MODEL VARIABLES
+
+% Input functions
+U1 = piecewiseSB(0, ge(time, 10), 2)                         % Input function on state X
+U2 = -0.5 +  piecewiseSB(0, lt(time, 5), 0, ge(time, 15),1)  % Input function on state X
+
+********** MODEL REACTIONS
+X => : R1
+    vf = X
+    
+  => X : R2
+    vf = U1
+    
+  => Y : R3
+    vf = U2
+
+********** MODEL FUNCTIONS
+
+
+********** MODEL EVENTS
+
+
+********** MODEL MATLAB FUNCTIONS
+

@@ -1,0 +1,16 @@
+********** EXPERIMENT NAME
+PHO3D accumulation ThDP 10uM
+
+********** EXPERIMENT NOTES
+
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+Thex(0) = 0.01
+ThMPex(0) = 0.1
+ThDPex(0) = 10
+
+k_PHO3 = 0
+
+********** EXPERIMENT PARAMETER CHANGES
+
+********** EXPERIMENT STATE CHANGES
