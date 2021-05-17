@@ -125,7 +125,7 @@ fig=0;
 
 %% Simulations for best cost.
 
-Estimation_folder ='Results\MLMM_final\Estimation';
+Estimation_folder ='Results/MLMM_final/Estimation';
 S = dir(Estimation_folder);
 load(strcat(Estimation_folder,'/',S(3).name));
 theta2 = Results.xbest;

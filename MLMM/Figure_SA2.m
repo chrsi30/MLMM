@@ -30,7 +30,7 @@ id_Gconc = ismember(SBvariables(objModel),'Gconc');
 hfd_color = [ 0.2, 0.5, 0.98];
 t2d_color = [1,0.7,0.2];
 
-Estimation_folder ='Results\MLMM_final\Estimation';
+Estimation_folder ='Results/MLMM_final/Estimation';
 S = dir(Estimation_folder);
 load(strcat(Estimation_folder,'/',S(3).name));
 theta2 = Results.xbest;

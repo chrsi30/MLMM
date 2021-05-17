@@ -1,5 +1,5 @@
 %% Setup SBtoolbox
-cd ('.\SBPOPPACKAGE');
+cd ('./SBPOPPACKAGE');
 installSBPOPpackage
 cd ..
 %% Setup
