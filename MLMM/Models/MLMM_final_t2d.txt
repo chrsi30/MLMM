@@ -46,8 +46,8 @@ d/dt(PKB308473) = (v1PKB308_308473  + v1PKB473_308473 - v1PKB308473_308 - v1PKB3
 d/dt(AS160)     = ( AS160p*as2  -   AS160*as1*totalPKB308     )*dtm 
 d/dt(AS160p)    = ( AS160*as1*totalPKB308 - AS160p*as2        )*dtm                                                 
                                          
-d/dt(RABGTP)    = (RABGDP*gka1-RABGTP*gka2*AS160 )*dtm      %                                              
-d/dt(RABGDP)    = (-RABGDP*gka1+RABGTP*gka2*AS160)*dtm  %
+d/dt(RABGTP)    = (RABGDP*gka1-RABGTP*gka2*AS160 )*dtm                                                   
+d/dt(RABGDP)    = (-RABGDP*gka1+RABGTP*gka2*AS160)*dtm  
 d/dt(PMA)       = (-PMA*gkl1*IRp/f_IR_PMA    + PMAa*gkl2)*dtm                                                     
 d/dt(PMAa)      = (PMA*gkl1*IRp/f_IR_PMA     - PMAa*gkl2)*dtm 
                                                                                         
@@ -107,9 +107,9 @@ EI              = 7
 cf              = 0.7  
 FMinit          = 2.5300  
 FFMinit         = 20.4700     
-alpha_c         = 0.1      %0.13
-alpha_d         = 0.00019  %0.020
-alpha_k         = 0.45     %0.090
+alpha_c         = 0.1      
+alpha_d         = 0.00019  
+alpha_k         = 0.45     
 rho_FM          = 9.4
 rho_FFM         = 1.8
 gamma_FM        = 0.03
@@ -120,17 +120,17 @@ beta            = 0.4
 K               = 2.1                                                                                                                                                             
 lambda          = 0.144479
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-G_SS            = 5.85              % Using Alskär values.
+G_SS            = 5.85              
 I_SS            = 68.8
-Q               = 0.0647          % L/h
-CL_I            = 0.1786          % L/h
+Q               = 0.0647          
+CL_I            = 0.1786          
 k_a             = 6.7293                                                                                                                                            
-k_IE            = 9.4923          % /h                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-k_GE1           = 12.879          % /h
-k_GE2           = 25.535          % /h
+k_IE            = 9.4923                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+k_GE1           = 12.879          
+k_GE2           = 25.535          
 
-CL_GI           = 0.00034285      % (L/h)  
-CL_G            = 0.0218          % (L/h)
+CL_GI           = 0.00034285      
+CL_G            = 0.0218          
 k_ip            = 1 
 IPRG            = 1.42        
 GPRG            = -2.79 
@@ -144,30 +144,30 @@ b_PMA           = 1
 kbasalIRS       = 1
 GluProp         = 0.01535 
 
-ik1             = 0.0020     % IR                                                                
+ik1             = 0.0020                                                                   
 ik1basal        = 0.0043                                                               
 ik2             = 1.9332                                                                             
 ikR             = 0.7932                                                                      
-ik3             = 0.1243     % IRS1                                                                  
+ik3             = 0.1243                                                                    
 ikm3            = 19.6444                                                                      
-ik4             = 79.0576    % X                                                                    
+ik4             = 79.0576                                                                       
 ikm4            = 1.1018   
 ikf             = 73.8741 
 
-kpI1t2          = 7.4089     % PIP2 and PIP3                                                                         
+kpI1t2          = 7.4089                                                                              
 kpI2t2          = 39.6374    
 kpi1            = 50.3746                                                                      
 kpi2            = 3.7679  
 
-kpd1            = 2.7857     % PDK1                                                                     
+kpd1            = 2.7857                                                                         
 kpd2            = 0.5348     
 
-k4731           = 67.1693    % 
-k3081           = 6.2902     % 
-as1             = 57.3653    %  
+k4731           = 67.1693    
+k3081           = 6.2902     
+as1             = 57.3653     
 as2             = 33.3260                                                                       
 
-k43             = 42.8235    %
+k43             = 42.8235    
 gkr             = 0.4528                                                                                
 gk3             = 0.2919                                                                                
 gke             = 1.3427                                                                                   
@@ -187,13 +187,13 @@ k4732           = 30.8146
 gkl1            = 70.3705                                                                             
 gkl2            = 2.9805   
                                                            
-Insact          = 1 %  effect of body insulin
+Insact          = 1 
 ins             = 0      
 
 t2dswitch       = 0
 ss_x            = 1
 BIOG            = 72.2  
-IPGTT_dose      = 0.2775 % (mmole) % 50 mg/mouse     50mg/ 180.156 g/mol=> 0.0500g/180.156g/mol=  2.7754e-04mol = 0.2775mmol
+IPGTT_dose      = 0.2775 % (mmole) 
 IPGTT_time      = 1
 ********** MODEL VARIABLES   
 BW              = FM+FFM     
@@ -230,7 +230,7 @@ totalAS160      = AS160 + AS160p
 totalIRS1       = IRS + IRSp
 C3              = 1-C0-C1-C2                                                                                
 GLUT4m          = C1+C2                                                                                                                                           
-insulin_input   = (I_E/1000)*Insact + (1 - Insact)*ins    % (pmol/L)/1000 = nmol/L % ins = in vitro insulin dose, insact is switch
+insulin_input   = (I_E/1000)*Insact + (1 - Insact)*ins    
  
 CL_GIA          = GLUT4m*GluProp
 
@@ -254,8 +254,7 @@ U_id_H          = (CL_GIH*(I_E)*G_C/VG )/f_IR_CLGI
 
 U_id                 = (U_id_A + U_id_M + U_id_H)   
 
-% plotting
-                  
+% plotting                  
 Gconc           = G_C/VG
 Iconc           = I_C/VI                                                                                                                                                                                                                                                                       
 ********** MODEL REACTIONS 

@@ -85,7 +85,7 @@ set(figure(2), 'outerposition',[0 0 2560 1440], 'PaperType','a4')
 plot_line(3,4,1:4,chow4w.statevalues( : , id_FM )./chow4w.statevalues( 1 , id_FM )  ,chow4w.time,'1','1','1',TrainColor)
 hold on
 plot_line(3,4,1:4,hfd4w.statevalues( : , id_FM )./hfd4w.statevalues( 1 , id_FM )  ,hfd4w.time,'1',xlabel_long,'Fat mass gain (g)',hfd_color)
-plot_line(3,4,1:4,hfd4wt2d.statevalues( : , id_FM )./hfd4wt2d.statevalues( 1 , id_FM )  ,hfd4wt2d.time,'1',xlabel_long,'Fat mass(g)',t2d_color,'--')
+plot_line(3,4,1:4,hfd4wt2d.statevalues( : , id_FM )./hfd4wt2d.statevalues( 1 , id_FM )  ,hfd4wt2d.time,'1',xlabel_long,'Fat mass gain(g)',t2d_color,'--')
 xlim([0 28])
 xticks([ 0 7 14 21 28]);
 

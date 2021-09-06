@@ -49,7 +49,7 @@ filedir = './Results/MLMM_final/Pred/minmax';
 files=dir(fullfile(filedir, '*.mat'));
 nfiles = length(files);
 figure(1)        
-Figure_5A    
+Figure_5A
 cd ..
 cd('./Bergqvist et al (2017)');
 figure(2)

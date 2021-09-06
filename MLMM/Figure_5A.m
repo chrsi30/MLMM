@@ -81,6 +81,10 @@ TrainColor = [ 0.5,0.5,0.5];
 label_size = 25;
 label_size_ax = 18;
 marker_size = 5;
+
+figure(1)
+set(figure(1), 'outerposition',[0 0 900 600], 'PaperType','a4')
+
 subplot(1,2,1)
 
 y = [1 D.Phos.MeanPKB(:,2) 1 best_fold_diet_PKB ];
@@ -93,6 +97,13 @@ b(1).CData(4,:) = TrainColor;
 errhigh = [Max_fold_diet_PKB - best_fold_diet_PKB   ]  ;
 errlow  = [Min_fold_diet_PKB - best_fold_diet_PKB   ]  ;
 errorbar(4 , best_fold_diet_PKB ,errlow,errhigh,'O', 'color', [0.4 0.4 0.4], 'linewidth', 1.5 ,'markersize', 3 )
+
+
+Raw_data1 =D.RAW_IC_DATA.pPKB_S473_PKB_tot_hfd;
+s = scatter( 2*ones(length( Raw_data1),1), Raw_data1,'filled',...
+    'MarkerFaceColor',[ 0 0 0],'SizeData',40);
+alpha(s,.45)
+
 errorbar(2 ,D.Phos.MeanPKB(:,2) ,D.Phos.SEMPKB(:,2),'k*' ,'linewidth',1.5)
 
 box off
@@ -103,6 +114,7 @@ xticklabels({'Data','Model' })
 a = get(gca,'XTickLabel');  
 set(gca,'XTickLabel',a,'fontsize',label_size_ax,'FontWeight','bold')
 ylabel({'PKB pS473/PKB total';'(fold of chow)'},'fontsize',label_size)
+
 
 %%
 subplot(1,2,2)
@@ -118,6 +130,13 @@ b(1).CData(4,:) = TrainColor;
 errhigh = [Max_fold_diet_AS160 - best_fold_diet_AS160   ]  ;
 errlow  = [Min_fold_diet_AS160 - best_fold_diet_AS160   ]  ;
 errorbar(4 , best_fold_diet_AS160 ,errlow,errhigh,'O', 'color', [0.4 0.4 0.4], 'linewidth', 1.5 ,'markersize', 3 )
+
+Raw_data1 =D.RAW_IC_DATA.pAS160_T612_AS160tot_hfd;
+s = scatter( 2*ones(length( Raw_data1),1), Raw_data1,'filled',...
+    'MarkerFaceColor',[ 0 0 0],'SizeData',40);
+alpha(s,.45)
+
+
 errorbar(2 ,D.Phos.MeanAS160(:,2) ,D.Phos.SEMAS160(:,2),'k*' ,'linewidth',1.5)
 
 box off
@@ -128,6 +147,4 @@ xticklabels({'Data','Model' })
 a = get(gca,'XTickLabel');  
 set(gca,'XTickLabel',a,'fontsize',label_size_ax,'FontWeight','bold')
 ylabel({'AS160 pS473/AS160 total';'(fold of chow)'},'fontsize',label_size)
-
-
 
