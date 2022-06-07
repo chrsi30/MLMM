@@ -1,6 +1,0 @@
-#
-@ maxstor=100000
-@ bell=0
-@ but=quit:fq
-@ total=40
-#

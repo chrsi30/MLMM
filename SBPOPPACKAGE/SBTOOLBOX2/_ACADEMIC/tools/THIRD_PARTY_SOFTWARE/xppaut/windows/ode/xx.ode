@@ -1,4 +1,0 @@
-table x xx.tab
-@ meth=discrete
-u'=x(mod(t,5))
-done

@@ -1,5 +1,0 @@
-WT accumulation of thiamine in yeast.
-Cells cultured o/n w/o thiamine in the medium.
-Then adding 100um thiamine to the medium and 
-taking samples thereafter.
-
